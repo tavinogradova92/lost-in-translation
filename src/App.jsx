@@ -3,6 +3,7 @@ import './App.css';
 import Homepage from './components/Homepage';
 import NavBar from './components/NavBar';
 import Translation from './components/Translation';
+import Profile from './components/Profile';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Switch>
           <Route path="/login" component={Homepage}/>
           <Route path="/translation" component={Translation}/>
+          <Route path="/profile" component={Profile}/>
           <Route path="/">
               <Redirect to="/login"/>
           </Route>
