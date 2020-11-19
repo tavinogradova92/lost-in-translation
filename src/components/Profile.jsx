@@ -21,11 +21,15 @@ function Profile() {
         history.push("/");
     };
 
+    const backToTranslation = () => {
+        history.push("/translation");
+    };
 
     return (
         <div>
             <h3>The last ten translations: </h3>
             <ul>{renderStoredSentences(storedSentences)}</ul>
+            <button onClick={backToTranslation}>Back to translation</button>
             <button onClick={doLogout}>Log Out</button>
         </div>
     )
