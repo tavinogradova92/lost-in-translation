@@ -15,15 +15,13 @@ function Translation() {
     let storedSentences = localStorage.getItem("sentences");
     storedSentences = storedSentences ? storedSentences.split(",") : [];
 
-    if (storedSentences.length > 10) {
+    if (storedSentences.length > 9) {
         storedSentences.pop();
     }
     storedSentences.unshift(sentenceToStore);
 
     localStorage.setItem("sentences", storedSentences);
-};
-
-
+  };
 
   return (
     <div className="container">
