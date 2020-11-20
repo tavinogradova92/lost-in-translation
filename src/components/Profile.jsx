@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import { AppContext } from '../state/AppContext';
 
 function Profile() {
+
+    const { setUsername, changeLoginStatus } = useContext(AppContext);
 
     let storedSentences = localStorage.getItem("sentences");
 
@@ -16,6 +19,8 @@ function Profile() {
     const history = useHistory();
 
     const doLogout = () => {
+        changeLoginStatus(false);
+        setUsername(null);
         localStorage.removeItem("userName");
         localStorage.removeItem("sentences");
         history.push("/");
