@@ -23,6 +23,7 @@ function Profile() {
         setUsername(null);
         localStorage.removeItem("userName");
         localStorage.removeItem("sentences");
+        localStorage.removeItem("loginStatus");
         history.push("/");
     };
 

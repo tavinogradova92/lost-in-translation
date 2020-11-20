@@ -21,7 +21,7 @@ function SearchField({ onTranslate }) {
                     type="search"
                     placeholder="Write the word(s) you'd like to translate"
                     maxLength="40"
-                    size="50"
+                    width="100"
                     onKeyUp={ onKeyPressed }
                     onChange={(e) => setSentence(e.target.value)}
                 />

@@ -4,7 +4,8 @@ import { AppContext } from '../state/AppContext';
 
 function LoginForm({ onSuccess }) {
 
-  const { username, setUsername, changeLoginStatus } = useContext(AppContext);
+  const { username, setUsername } = useContext(AppContext);
+  const { isLoggedIn, changeLoginStatus } = useContext(AppContext);
   const [loginError, setLoginError ] = useState('');
 
   const onLoginClicked = () => {
@@ -14,6 +15,7 @@ function LoginForm({ onSuccess }) {
       // store the username in the local storage
       localStorage.setItem('userName', username);
       changeLoginStatus(true);
+      localStorage.setItem("loginStatus", true);
       onSuccess();
     }
   }

@@ -9,13 +9,21 @@ import { AppContext } from './state/AppContext';
 
 function App() {
 
-  const { username, setUsername } = useContext(AppContext);
+  const { username, setUsername, isLoggedIn, changeLoginStatus } = useContext(AppContext);
 
   useEffect(() => {
     const savedUsername = localStorage.getItem("userName");
 
     if(savedUsername) {
       setUsername(savedUsername);
+  }
+  }, [])
+
+  useEffect(() => {
+    const savedLoginStatus = localStorage.getItem("loginStatus");
+
+    if(savedLoginStatus) {
+      changeLoginStatus(savedLoginStatus);
   }
   }, [])
 
