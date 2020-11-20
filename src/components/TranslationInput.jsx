@@ -20,7 +20,7 @@ function SearchField({ onTranslate }) {
                 <input 
                     type="search"
                     placeholder="Write the word(s) you'd like to translate"
-                    maxlength="40"
+                    maxLength="40"
                     size="50"
                     onKeyUp={ onKeyPressed }
                     onChange={(e) => setSentence(e.target.value)}
