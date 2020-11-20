@@ -1,22 +1,16 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import ErrorMessage from './ErrorMessage';
 import { AppContext } from '../state/AppContext';
 
 function LoginForm({ onSuccess }) {
 
-  const { username, setUsername, isLoggedIn, changeLoginStatus } = useContext(AppContext);
+  const { username, setUsername, changeLoginStatus } = useContext(AppContext);
   const [loginError, setLoginError ] = useState('');
 
-  useEffect( () => {
-    if (username !== null && username.length < 3) {
-        setLoginError('Please, type a username with at least 3 letters.');
-      } else {
-        setLoginError("");
-      }
-  }, [username]);
-
   const onLoginClicked = () => {
-    if (username.length >= 3) {
+    if (username !== null && username.length < 3) {
+      setLoginError('Please, type a username with at least 3 letters.');
+    } else if (username.length >= 3) {
       // store the username in the local storage
       localStorage.setItem('userName', username);
       changeLoginStatus(true);
