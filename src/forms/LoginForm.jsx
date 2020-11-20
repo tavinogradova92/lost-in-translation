@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import ErrorMessage from './ErrorMessage';
+import { AppContext } from '../state/AppContext';
 
 function LoginForm({ onSuccess }) {
 
-  const [ username, setUsername ] = useState(null);
+  const { username, setUsername, isLoggedIn, changeLoginStatus } = useContext(AppContext);
   const [loginError, setLoginError ] = useState('');
 
   useEffect( () => {
@@ -16,9 +17,10 @@ function LoginForm({ onSuccess }) {
 
   const onLoginClicked = () => {
     if (username.length >= 3) {
-        // store the username in the local storage
-        localStorage.setItem('userName', username);
-        onSuccess();
+      // store the username in the local storage
+      localStorage.setItem('userName', username);
+      changeLoginStatus(true);
+      onSuccess();
     }
   }
 
