@@ -4,20 +4,20 @@ import './NotFound.css';
 
 function NotFound() {
     return (
-        <div class="errorPage">
-            <div class="face">
-	            <div class="band">
-		            <div class="red"></div>
-		            <div class="white"></div>
-		            <div class="blue"></div>
+        <div className="errorPage">
+            <div className="face">
+	            <div className="band">
+		            <div className="red"></div>
+		            <div className="white"></div>
+		            <div className="blue"></div>
 	            </div>
-	            <div class="eyes"></div>
-	            <div class="dimples"></div>
-	            <div class="mouth"></div>
+	            <div className="eyes"></div>
+	            <div className="dimples"></div>
+	            <div className="mouth"></div>
             </div>
 
             <h1>Oops! Something went wrong!</h1>
-            <Link to="/translation" class="btn">Return to Translation</Link>
+            <Link to="/translation" className="btn">Return to Translation</Link>
         </div>
     )
 }

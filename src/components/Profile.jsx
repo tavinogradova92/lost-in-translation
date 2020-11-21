@@ -4,7 +4,7 @@ import { AppContext } from '../state/AppContext';
 
 function Profile() {
 
-    const { setUsername, changeLoginStatus } = useContext(AppContext);
+    const { setUsername, changeLoginStatus, setSentence } = useContext(AppContext);
 
     let storedSentences = localStorage.getItem("sentences");
 
@@ -14,13 +14,13 @@ function Profile() {
             return <li key={index}>{sentence}</li>;
         });
     };
-    
 
     const history = useHistory();
 
     const doLogout = () => {
         changeLoginStatus(false);
         setUsername(null);
+        setSentence(null);
         localStorage.removeItem("userName");
         localStorage.removeItem("sentences");
         localStorage.removeItem("loginStatus");
@@ -31,11 +31,17 @@ function Profile() {
         history.push("/translation");
     };
 
+    const clearSentences = () => {
+        storedSentences = localStorage.removeItem("sentences");
+        setSentence(null);
+    }
+
     return (
         <div>
             <h3>The last ten translations: </h3>
             <ul>{renderStoredSentences(storedSentences)}</ul>
             <button onClick={backToTranslation}>Back to translation</button>
+            <button onClick={clearSentences}>Clear translated sentences</button>
             <button onClick={doLogout}>Log Out</button>
         </div>
     )

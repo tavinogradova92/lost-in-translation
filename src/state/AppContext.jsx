@@ -6,12 +6,15 @@ function AppProvider(props) {
 
     const [ username, setUsername ] = useState(null);
     const [ isLoggedIn, changeLoginStatus ] = useState(false);
+    const [sentence, setSentence] = useState('');
 
     const appState = {
         username,
         setUsername,
         isLoggedIn,
-        changeLoginStatus
+        changeLoginStatus,
+        sentence,
+        setSentence
     }
 
     return (

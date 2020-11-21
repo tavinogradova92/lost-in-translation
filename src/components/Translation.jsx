@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import TranslationInput from './TranslationInput';
 import TranslationResult from './TranslationResult';
+import { AppContext } from '../state/AppContext';
 
 function Translation() {
 
-  const [sentence, setSentence] = useState('');
+  const { sentence, setSentence } = useContext(AppContext);
 
   const handleTranslation = (sentenceToTranslate) => {
     updateStoredSentences(sentenceToTranslate);
