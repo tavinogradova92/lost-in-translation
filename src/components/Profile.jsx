@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../state/AppContext';
+import './Profile.css';
 
 function Profile() {
 
@@ -37,12 +38,12 @@ function Profile() {
     }
 
     return (
-        <div>
+        <div className="profileSection">
             <h3>The last ten translations: </h3>
-            <ul>{renderStoredSentences(storedSentences)}</ul>
-            <button onClick={backToTranslation}>Back to translation</button>
-            <button onClick={clearSentences}>Clear translated sentences</button>
-            <button onClick={doLogout}>Log Out</button>
+            <ul className="unorderedList">{renderStoredSentences(storedSentences)}</ul>
+            <button className="back-button" onClick={backToTranslation}>Back to translation</button>
+            <button className="clear-button" onClick={clearSentences}>Clear translated sentences</button>
+            <button className="logout-button" onClick={doLogout}>Log Out</button>
         </div>
     )
 }
