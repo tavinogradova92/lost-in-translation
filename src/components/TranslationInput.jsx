@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TranslationInput.css';
 
 function SearchField({ onTranslate }) {
 
@@ -14,26 +15,30 @@ function SearchField({ onTranslate }) {
 
 
     return (
-        <div className="searchField">
-            <form>
-                <label htmlFor="translation">Translation</label>
-                <input 
-                    type="search"
-                    placeholder="Write the word(s) you'd like to translate"
-                    maxLength="40"
-                    width="100"
-                    onKeyUp={ onKeyPressed }
-                    onChange={(e) => setSentence(e.target.value)}
-                />
-                <button 
-                    type="button"
-                    disabled={ !sentence.trim() }
-                    onClick={ doTranslate }
-                > 
-                    Translate
-                </button>
-            </form>
+        <div className="searchField_container">
+            <h3>Write down the translated sentence</h3>
+            <div className="searchField">
+                <form className="form">
+                    <input 
+                        type="search"
+                        placeholder="Write the word(s) you'd like to translate"
+                        maxLength="40"
+                        className="inputField"
+                        onKeyUp={ onKeyPressed }
+                        onChange={(e) => setSentence(e.target.value)}
+                    />
+                    <button 
+                        type="button"
+                        disabled={ !sentence.trim() }
+                        className="translateButton"
+                        onClick={ doTranslate }
+                    > 
+                        Translate
+                    </button>
+                </form>
+            </div>
         </div>
+        
   );
 }
 

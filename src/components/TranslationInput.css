@@ -1,0 +1,45 @@
+.searchField_container {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+h3 {
+    margin-top: 2%;
+}
+
+.searchField {
+    display: flex;
+    margin-top: 2%;
+    height: 15vh;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 20px;
+}
+
+.form {
+    display: flex;
+}
+
+.inputField {
+    width: 70vw;
+    outline: 0px solid transparent;
+    margin-right: 2%;
+}
+
+.translateButton {
+    display: flex;
+    min-width: 6vw;
+    margin-left: 15vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.translateButton:hover {
+    background-color: #F5F5F5;
+}
