@@ -16,7 +16,7 @@ function SearchField({ onTranslate }) {
 
     return (
         <div className="searchField_container">
-            <h3>Write down the translated sentence</h3>
+            <h3>Write down the sentence to be translated into sign language:</h3>
             <div className="searchField">
                 <form className="form">
                     <input 
