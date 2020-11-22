@@ -17,7 +17,7 @@ function TranslationResult({sentence}) {
     const signsFromSentence = translateSentence(sentence);
 
     return (
-        <div className="container">
+        <div className="translationResultContainer">
             <section className="translationField">
                 <div className="translationBox">
                     { renderAllSigns(signsFromSentence) }

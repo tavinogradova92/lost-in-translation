@@ -25,7 +25,7 @@ function Translation() {
   };
 
   return (
-    <div className="container">
+    <div className="translationContainer">
       <TranslationInput
         onTranslate={ handleTranslation }
       />
