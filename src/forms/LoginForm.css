@@ -1,7 +1,11 @@
 .loginForm {
     display: flex;
-    height: 20vh;
+    height: 7vh;
     justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 20px;
+    padding-right: 1%;
 }
 
 .keyboard-icon {
@@ -14,22 +18,19 @@
 }
 
 .loginButton {
-    height: 4vh;
-    margin-left: 2%;
-    min-width: 5vw;
-    font-size: 0.7em;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid black;
-    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    height: 5vh;
+    align-items: center;
     cursor: pointer;
 }
 
-.loginButton:hover {
-    background-color: #F5F5F5;
+.loginButton img {
+    height: 5vh;
 }
 
 input {
-    height: 4vh;
-    padding-left: 5%;
+    height: 5vh;
+    padding-left: 4%;
+    border: 0;
 }

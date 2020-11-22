@@ -3,6 +3,7 @@ import ErrorMessage from './ErrorMessage';
 import { AppContext } from '../state/AppContext';
 import './LoginForm.css';
 import icon from '../images/keyboard-icon.png';
+import loginButton from '../images/login-button.png';
 
 function LoginForm({ onSuccess }) {
 
@@ -31,10 +32,11 @@ function LoginForm({ onSuccess }) {
             placeholder="What's your name?"
             onChange={ (e) => setUsername(e.target.value.trim()) }
           />
-          <button 
-            type="button"
+          <div 
             className="loginButton"
-            onClick={ onLoginClicked }>Login</button>
+            onClick={ onLoginClicked }>
+              <img src={loginButton} alt=""/>
+          </div>
         </form>
       
       <ErrorMessage error={ loginError }/>
