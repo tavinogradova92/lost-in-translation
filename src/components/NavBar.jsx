@@ -1,6 +1,9 @@
 import React, { useContext }  from 'react';
 import { useHistory } from 'react-router-dom';
 import { AppContext } from '../state/AppContext';
+import { Link } from 'react-router-dom';
+import './NavBar.css';
+import ProfileImage from '../images/ProfileImage.png';
 
 function Navbar() {
 
@@ -17,11 +20,13 @@ function Navbar() {
 
   return (
     <div className="navBar">
-      Lost In Translation
+      <Link to="/" className="h2">Lost In Translation</Link>
       {storedUsername !== null && storedLoginStatus === 'true' &&
-        <div className="container">
-          <img src="https://www.pngitem.com/pimgs/m/87-877270_logo-icon-profile-png-transparent-png.png" alt="profile"/>
-          <button onClick={redirectToProfile}>{username}</button>
+        <div className="profile">
+          <button className="profile-button" onClick={redirectToProfile}>
+            {username} 
+            <img src={ProfileImage} alt="profile"/>
+          </button>
         </div>
       }
     </div>
