@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# App translating from English into US sign language. Technologies used: JavaScript, React, React Router, Local Storage, Context API, CSS, CSS Grid, Flexbox, Git
+
+![screenshot two](src/images/screenshot2.jpg)
+
+![screenshot one](src/images/screenshot1.jpg)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
