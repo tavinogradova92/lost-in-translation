@@ -1,0 +1,35 @@
+.container {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.translationField {
+    display: flex;
+    width: 90vw;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    min-height: 15vh;
+    justify-content: left;
+    align-items: center;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 20px;
+}
+
+.translation-text {
+    display: flex;
+    width: 90vw;;
+    margin-top: -2%;
+    background-color: #FF5A5F;
+    border-bottom: 10px solid #FF5A5F;
+    border-right: 1px solid #FF5A5F;
+    border-left: 1px solid #FF5A5F;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+}
+
+.translation-text_text {
+    padding-left: 2%;
+    padding-top: 1%;
+}

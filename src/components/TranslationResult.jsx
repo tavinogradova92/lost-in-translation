@@ -1,5 +1,6 @@
 import React from 'react';
 import translateSentence from '../utils/ImageStorage';
+import './TranslationResult.css';
 
 function TranslationResult({sentence}) {
 
@@ -22,6 +23,10 @@ function TranslationResult({sentence}) {
                     { renderAllSigns(signsFromSentence) }
                 </div>
             </section>
+            <div>
+                <p className="translation-text"><span className="translation-text_text">Translation</span></p>
+            </div>
+            
         </div>
   );
 }

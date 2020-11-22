@@ -1,6 +1,7 @@
 .searchField_container {
     margin-left: 2%;
     margin-right: 2%;
+    max-width: 90vw;
 }
 
 h3 {
@@ -22,7 +23,7 @@ h3 {
 }
 
 .inputField {
-    width: 70vw;
+    width: 65vw;
     outline: 0px solid transparent;
     margin-right: 2%;
 }
