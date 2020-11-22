@@ -1,22 +1,17 @@
-image: node:14.15.0
-
-cache:
-  paths:
-    - node_modules/
-
-before_script:
-  - rm -rf build
-  - CI=false npm install
-
+image: node:latest # can be upgraded, depending on your node version used
+ 
 pages:
+  cache:
+    paths:
+    - ./node_modules/
+ 
   stage: deploy
   script:
-    - CI=false npm run build
-    - rm -rf public
-    - cp build/index.html build/404.html
-    - mv build public
+  - npm install
+  - npm run build
+  - mv build/* public/
   artifacts:
     paths:
-      - public
+    - public # mandatory, other folder won't work
   only:
-    - master
+  - master # or dev, the branch you want to publish
