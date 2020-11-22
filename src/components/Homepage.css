@@ -1,3 +1,36 @@
-img {
-    width: 50px;
+.homePage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "loginForm loginForm";
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-self: center;
+    margin-bottom: 6vh;
+    padding: 3%;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.loginForm {
+    grid-area: loginForm;
+    justify-self: center;
+}
+
+.main-image {
+    height: 30vh;
+    margin-top: 3%;
+    margin-left: 3%;
 }

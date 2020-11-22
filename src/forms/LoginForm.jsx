@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import ErrorMessage from './ErrorMessage';
 import { AppContext } from '../state/AppContext';
+import './LoginForm.css';
+import icon from '../images/keyboard-icon.png';
 
 function LoginForm({ onSuccess }) {
 
@@ -22,9 +24,8 @@ function LoginForm({ onSuccess }) {
 
   return (
     <div className="loginForm">
-
-        <form>
-          <label htmlFor="username">Username</label>
+      <img className="keyboard-icon" src={icon} alt="keyboard"/>
+        <form className="form">
           <input 
             type="text"
             placeholder="What's your name?"
@@ -32,6 +33,7 @@ function LoginForm({ onSuccess }) {
           />
           <button 
             type="button"
+            className="loginButton"
             onClick={ onLoginClicked }>Login</button>
         </form>
       
